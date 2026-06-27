@@ -1,95 +1,102 @@
-# 🎓 EduSphere - Education Management System
+# 🎓 StudySync - Education Management System
 
-EduSphere is a web-based **Education Management System** built with **Laravel Blade** that helps manage students, teachers, courses, attendance, results, and academic activities through a simple and user-friendly dashboard.
+StudySync is a web-based **Education Management System** built with **Laravel Blade** that helps educational institutions manage students, teachers, courses, attendance, results, and academic activities through a simple and efficient dashboard.
 
 ## 🚀 Features
 
-- 🔐 Authentication System
-  - Admin Login
-  - Teacher Login
-  - Student Login
+### 🔐 Authentication
+- Admin Login
+- Teacher Login
+- Student Login
+- Role-based dashboard access
 
-- 👨‍🎓 Student Management
-  - Add, edit, delete students
-  - View student profiles
-  - Manage student information
+### 👨‍🎓 Student Management
+- Add, update, and delete students
+- View student profiles
+- Manage student information
 
-- 👨‍🏫 Teacher Management
-  - Add and manage teachers
-  - Assign subjects
+### 👨‍🏫 Teacher Management
+- Add and manage teachers
+- Assign subjects and courses
 
-- 📚 Course Management
-  - Create courses and subjects
-  - Assign teachers to courses
+### 📚 Course Management
+- Create courses and subjects
+- Manage course information
+- Assign teachers to courses
 
-- 📝 Attendance Management
-  - Take attendance
-  - View attendance reports
+### 📝 Attendance Management
+- Record student attendance
+- View attendance reports
 
-- 📊 Result Management
-  - Add student marks
-  - Calculate grades
-  - View results
+### 📊 Result Management
+- Add marks
+- Calculate grades
+- View student results
 
-- 📢 Notice Board
-  - Create and view announcements
+### 📢 Notice Board
+- Publish announcements
+- View academic notices
 
-- 📈 Dashboard
-  - Overview statistics
-  - User-friendly admin panel
+### 📈 Dashboard
+- Student statistics
+- Teacher statistics
+- Course overview
+- Recent activities
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Technology | Used For |
-|------------|----------|
+| Technology | Purpose |
+|------------|---------|
 | Laravel | Backend Framework |
 | Blade | Frontend Template Engine |
 | PHP | Programming Language |
 | MySQL | Database |
-| Bootstrap | UI Design |
-| JavaScript | Client-side Interaction |
+| Bootstrap | UI Framework |
+| JavaScript | Frontend Interaction |
 
 ---
 
-## 📂 Project Modules
+## 📂 Main Modules
 
 ```
-Admin
- ├── Dashboard
- ├── Student Management
- ├── Teacher Management
- ├── Course Management
- ├── Attendance
- ├── Results
- └── Notices
-
-Teacher
- ├── Profile
- ├── Attendance
- └── Marks Management
-
-Student
- ├── Profile
- ├── Attendance View
- └── Result View
+StudySync
+│
+├── Admin Panel
+│   ├── Dashboard
+│   ├── Student Management
+│   ├── Teacher Management
+│   ├── Course Management
+│   ├── Attendance Management
+│   ├── Result Management
+│   └── Notice Management
+│
+├── Teacher Panel
+│   ├── Profile
+│   ├── Attendance
+│   └── Marks Management
+│
+└── Student Panel
+    ├── Profile
+    ├── Attendance View
+    └── Result View
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation Guide
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/edusphere.git
+git clone https://github.com/your-username/studysync.git
 ```
 
-### Go to Project Directory
+### Navigate to Project
 
 ```bash
-cd edusphere
+cd studysync
 ```
 
 ### Install Dependencies
@@ -98,13 +105,13 @@ cd edusphere
 composer install
 ```
 
-### Create Environment File
+### Setup Environment
 
 ```bash
 cp .env.example .env
 ```
 
-### Generate Application Key
+### Generate Key
 
 ```bash
 php artisan key:generate
@@ -115,9 +122,9 @@ php artisan key:generate
 Update your `.env` file:
 
 ```env
-DB_DATABASE=your_database_name
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+DB_DATABASE=studysync
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
 ### Run Migration
@@ -126,7 +133,7 @@ DB_PASSWORD=your_password
 php artisan migrate
 ```
 
-### Start Development Server
+### Start Server
 
 ```bash
 php artisan serve
@@ -136,7 +143,7 @@ php artisan serve
 
 ## 📸 Screenshots
 
-_Add project screenshots here._
+Add application screenshots here.
 
 ---
 
@@ -148,6 +155,26 @@ GitHub: https://github.com/your-username
 
 ---
 
+## 📌 GitHub Topics
+
+```
+laravel
+blade
+php
+mysql
+education-management-system
+student-management
+teacher-management
+attendance-system
+result-management
+admin-dashboard
+bootstrap
+crud
+web-application
+```
+
+---
+
 ## 📄 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
