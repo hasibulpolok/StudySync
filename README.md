@@ -168,7 +168,7 @@ teacher-management
 attendance-system
 result-management
 admin-dashboard
-bootstrap
+tailwindcss
 crud
 web-application
 ```
