@@ -53,7 +53,7 @@ StudySync is a web-based **Education Management System** built with **Laravel Bl
 | Blade | Frontend Template Engine |
 | PHP | Programming Language |
 | MySQL | Database |
-| Bootstrap | UI Framework |
+| Tailwind | UI Framework |
 | JavaScript | Frontend Interaction |
 
 ---
