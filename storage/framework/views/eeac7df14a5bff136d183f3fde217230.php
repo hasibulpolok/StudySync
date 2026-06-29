@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?php echo e(asset('assets/images/favicon-32x32.png')); ?>" type="image/png" />
+    <link href="<?php echo e(asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')); ?>" rel="stylesheet" />
+    <link href="<?php echo e(asset('assets/plugins/simplebar/css/simplebar.css')); ?>" rel="stylesheet" />
+    <link href="<?php echo e(asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')); ?>" rel="stylesheet" />
+    <link href="<?php echo e(asset('assets/plugins/metismenu/css/metisMenu.min.css')); ?>" rel="stylesheet" />
+    <link href="<?php echo e(asset('assets/css/pace.min.css')); ?>" rel="stylesheet" />
+    <script src="<?php echo e(asset('assets/js/pace.min.js')); ?>"></script>
+    <link href="<?php echo e(asset('assets/css/bootstrap.min.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('assets/css/bootstrap-extended.css')); ?>" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="<?php echo e(asset('assets/css/app.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('assets/css/icons.css')); ?>" rel="stylesheet">
+    <title>Admin Panel - Education Management System</title>
+</head>
+
+<body class="bg-theme bg-theme1">
+    <div class="wrapper">
+        <!--sidebar wrapper -->
+        <?php echo $__env->make('admin.parts.leftbar', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+        <!--end sidebar wrapper -->
+        <?php echo $__env->yieldContent('content'); ?>
+        <?php echo $__env->make('admin.parts.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    </div>
+    <!-- switcher -->
+    <div class="switcher-wrapper">
+        <div class="switcher-btn"><i class='bx bx-cog bx-spin'></i></div>
+        <div class="switcher-body">
+            <div class="d-flex align-items-center">
+                <h5 class="mb-0 text-uppercase">Theme Customizer</h5>
+                <button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
+            </div>
+            <hr />
+            <p class="mb-0">Gaussian Texture</p><hr>
+            <ul class="switcher">
+                <li id="theme1"></li><li id="theme2"></li><li id="theme3"></li>
+                <li id="theme4"></li><li id="theme5"></li><li id="theme6"></li>
+            </ul>
+            <hr>
+            <p class="mb-0">Gradient Background</p><hr>
+            <ul class="switcher">
+                <li id="theme7"></li><li id="theme8"></li><li id="theme9"></li>
+                <li id="theme10"></li><li id="theme11"></li><li id="theme12"></li>
+                <li id="theme13"></li><li id="theme14"></li><li id="theme15"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="<?php echo e(asset('assets/js/bootstrap.bundle.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/jquery.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/simplebar/js/simplebar.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/metismenu/js/metisMenu.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/chartjs/chart.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/sparkline-charts/jquery.sparkline.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/jquery-knob/excanvas.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/plugins/jquery-knob/jquery.knob.js')); ?>"></script>
+    <script>$(function() { $(".knob").knob(); });</script>
+    <script src="<?php echo e(asset('assets/js/index.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/app.js')); ?>"></script>
+    <?php echo $__env->yieldContent('scripts'); ?>
+</body>
+</html>
+<?php /**PATH C:\xampp\htdocs\StudySync\resources\views/admin/master.blade.php ENDPATH**/ ?>

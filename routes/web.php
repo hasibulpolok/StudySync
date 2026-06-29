@@ -11,8 +11,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// After login, redirect based on role
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $role = auth()->user()->role;
+    return match($role) {
+        'admin'   => redirect()->route('admin.dashboard'),
+        'teacher' => redirect()->route('teacher.dashboard'),
+        'student' => redirect()->route('student.dashboard'),
+        'faculty' => redirect()->route('faculty.dashboard'),
+        default   => view('dashboard'),
+    };
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -21,20 +29,25 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'role:admin'])->group(function(){
+// Admin routes
+Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
-Route::middleware(['auth', 'role:teacher'])->group(function(){
+
+// Teacher routes
+Route::middleware(['auth', 'role:teacher'])->group(function () {
     Route::get('/teacher/dashboard', [TeacherController::class, 'dashboard'])->name('teacher.dashboard');
 });
-Route::middleware(['auth', 'role:student'])->group(function(){
+
+// Student routes
+Route::middleware(['auth', 'role:student'])->group(function () {
     Route::get('/student/dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard');
+    Route::get('/student/profile', [StudentController::class, 'profile'])->name('student.profile');
 });
-Route::middleware(['auth', 'role:student'])->group(function(){
-    Route::get('/student/studentprofile', [StudentController::class, 'dashboard'])->name('student.profile');
-});
-Route::middleware(['auth', 'role:faculty'])->group(function(){
+
+// Faculty routes
+Route::middleware(['auth', 'role:faculty'])->group(function () {
     Route::get('/faculty/dashboard', [FacultyController::class, 'dashboard'])->name('faculty.dashboard');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
