@@ -30,6 +30,9 @@ Route::middleware(['auth', 'role:teacher'])->group(function(){
 Route::middleware(['auth', 'role:student'])->group(function(){
     Route::get('/student/dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard');
 });
+Route::middleware(['auth', 'role:student'])->group(function(){
+    Route::get('/student/studentprofile', [StudentController::class, 'dashboard'])->name('student.profile');
+});
 Route::middleware(['auth', 'role:faculty'])->group(function(){
     Route::get('/faculty/dashboard', [FacultyController::class, 'dashboard'])->name('faculty.dashboard');
 });
